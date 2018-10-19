@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show details..</title>
+  <link rel="stylesheet" href="drop.css">
+  <link rel="stylesheet" href="input.css">
+  </head>
+  <body>
+  <p>Welcome to the section where you can find an enormous amount of contractors as according to your need and demands.Here you ca look for contractors and contact them as per your feasibilty.</p>
+  <p>For searcing through the contactors's details move the mouse over the category amd submit yr choice</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'Name')">Name</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Block')">Block</button>
+  <button class="tablinks" onmouseover="openCity(event, 'City')">City</button>
+   <button class="tablinks" onmouseover="openCity(event, 'PinCode')">PinCode</button>
+    <button class="tablinks" onmouseover="openCity(event, 'State')">State</button>
+</div>
+
+<div id="Name" class="tabcontent">
+  <h3>Enter the Name</h3>
+  <input type="text"><br><button type="submit">Submit</button>
+</div>
+
+<div id="Block" class="tabcontent">
+  <h3>Enter the Block</h3>
+  <input type="text"><br><button type="submit">Submit</button>
+</div>
+<div id="City" class="tabcontent">
+  <h3>Enter the City</h3>
+  <input type="text"><br><button type="submit">Submit</button>
+</div>
+<div id="PinCode" class="tabcontent">
+  <h3>Enter the PIN CODE</h3>
+  <input type="text"><br><button type="submit">Submit</button>
+</div>
+<div id="State" class="tabcontent">
+  <h3>Enter the State</h3>
+  <input type="text"><br><button type="submit">Submit</button>
+  <div class="clearfix"></div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</div></div>
