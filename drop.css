@@ -77,7 +77,7 @@
     height: 320px;
     display: none;
     
-
+}
 /* Clear floats after the tab */
 .clearfix::after {
     content: "";

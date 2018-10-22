@@ -1,9 +1,10 @@
-console.log('Starting app.js');
+console.log('Starting details.js');
 
 const fs = require('fs');
 const _ = require('lodash');
+//console.log(_);
 const yargs = require('yargs');
-
+//console.log(yargs);
 const ds = require('./detailstore.js');
 
 const argv = yargs.argv;
@@ -35,6 +36,16 @@ else if(command === 'showstate')
 {
 	let r=ds.stateNote(argv.state);
 	console.log(r); 
+}
+else if(command === 'removebyname')
+{
+	let r=ds.removeNote(argv.name);
+	let msg=r ? 'Note was removed' : 'Note not found';
+	console.log(msg);
+}
+else
+{
+	console.log("WRONG COMMAND uSed");
 }
 
 
